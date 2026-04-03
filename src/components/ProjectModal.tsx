@@ -19,6 +19,7 @@ interface ProjectModalProps {
 
 const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   if (!project) return null;
 
@@ -40,6 +41,35 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
   return (
     <AnimatePresence>
+      {/* Lightbox */}
+      {lightboxOpen &&
+        project.media &&
+        project.media[currentMediaIndex].type === "image" && (
+          <motion.div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-md cursor-zoom-out"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightboxOpen(false)}
+          >
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-foreground/10 backdrop-blur-sm border border-border text-foreground hover:bg-foreground/20 transition-colors"
+              aria-label="Close lightbox"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <motion.img
+              src={project.media[currentMediaIndex].url}
+              alt={project.media[currentMediaIndex].caption || project.title}
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
       <motion.div
         className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
         initial={{ opacity: 0 }}
@@ -131,7 +161,8 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                           project.media![currentMediaIndex].caption ||
                           `${project.title} media ${currentMediaIndex + 1}`
                         }
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover cursor-zoom-in"
+                        onClick={() => setLightboxOpen(true)}
                       />
                     ) : (
                       <YouTube

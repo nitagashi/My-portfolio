@@ -26,6 +26,10 @@ const skills = [
   "Bitbucket",
   "Jira",
   "Agile",
+  "Rust",
+  "Tauri",
+  "Android",
+  "SQLite",
 ];
 
 const About = () => {
@@ -89,7 +93,7 @@ const About = () => {
               ))}
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-8">
+            {/* <div className="mt-12 grid grid-cols-3 gap-8">
               <div>
                 <p className="font-display text-4xl font-semibold text-gradient">
                   5+
@@ -114,7 +118,7 @@ const About = () => {
                   Happy Clients
                 </p>
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

@@ -45,7 +45,17 @@ export const projects: Project[] = [
       },
       {
         type: "image",
+        url: "assets/img/Yoga-admin-3.jpg",
+        caption: "Dashboard view",
+      },
+      {
+        type: "image",
         url: "assets/img/Yoga-admin-2.jpg",
+        caption: "Dashboard view",
+      },
+      {
+        type: "image",
+        url: "assets/img/Yoga-admin-4.jpg",
         caption: "Dashboard view",
       },
       {
@@ -193,12 +203,12 @@ export const projects: Project[] = [
     media: [
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+        url: "assets/img/streaming-platform.png",
         caption: "Product catalog view",
       },
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        url: "assets/img/streaming-platform-2.png",
         caption: "Checkout flow",
       },
       {
@@ -294,6 +304,57 @@ export const projects: Project[] = [
         type: "video",
         url: "d_LWBrv8P_I",
         caption: "App Video",
+      },
+    ],
+  },
+  {
+    id: "Finance-Tracker",
+    title: "Finance Tracker",
+    description:
+      "A comprehensive finance management application for tracking expenses and income.",
+    longDescription:
+      "A powerful finance management tool designed to help users track their financial activities. Features include expense categorization, budgeting tools, and detailed reporting. Built for accuracy and user-friendly navigation.",
+    tags: ["React JS", "Tauri 2.0", "Rust", "Android", "SQLite"],
+    image: "assets/img/finance.png",
+    liveUrl: "#",
+    githubUrl: "",
+    features: [
+      "Workout tracking",
+      "Nutrition log",
+      "Progress charts",
+      "Social features",
+    ],
+    year: "2023",
+    media: [
+      {
+        type: "image",
+        url: "assets/img/finance_1.png",
+        caption: "App screenshot",
+      },
+      {
+        type: "image",
+        url: "assets/img/finance_2.png",
+        caption: "App screenshot",
+      },
+      {
+        type: "image",
+        url: "assets/img/finance_3.png",
+        caption: "App screenshot",
+      },
+      {
+        type: "image",
+        url: "assets/img/finance_4.png",
+        caption: "App screenshot",
+      },
+      {
+        type: "video",
+        url: "Y06DOS2YoMo",
+        caption: "Desktop App",
+      },
+      {
+        type: "video",
+        url: "Y3ZHFlZ2_X0",
+        caption: "Mobile App",
       },
     ],
   },

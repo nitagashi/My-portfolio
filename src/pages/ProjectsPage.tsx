@@ -100,7 +100,7 @@ const ProjectsPage = () => {
       <Navbar />
 
       <main className="section-padding pt-32 pb-24">
-        <div className="max-w-7xl mx-auto">
+        <div className=" mx-auto">
           {/* Header */}
           <motion.div
             className="mb-12"
@@ -211,7 +211,7 @@ const ProjectsPage = () => {
 
           {/* Projects Grid */}
           <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6"
             layout
           >
             {filteredProjects.map((project, index) => (

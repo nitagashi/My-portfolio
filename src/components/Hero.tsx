@@ -6,15 +6,15 @@ const Hero = () => {
     <section className="relative min-h-screen flex flex-col justify-center section-padding py-20">
       {/* Background glow effect */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      
-      <div className="relative z-10 max-w-5xl mx-auto w-full">
+
+      <div className="relative z-10  mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="text-primary font-medium tracking-widest uppercase text-sm mb-6">
-            Creative Developer
+            Software Engineer
           </p>
         </motion.div>
 
@@ -37,8 +37,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          I design and build thoughtful, elegant interfaces that bring ideas to life. 
-          Focused on creating meaningful user experiences through clean code and creative design.
+          I design and build thoughtful, elegant interfaces that bring ideas to
+          life. Focused on creating meaningful user experiences through clean
+          code and creative design.
         </motion.p>
 
         <motion.div

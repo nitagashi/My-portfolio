@@ -5,7 +5,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/nitagashi", label: "GitHub" },
   {
     icon: Linkedin,
-    href: "www.linkedin.com/in/albenita-gashi",
+    href: "https://www.linkedin.com/in/albenita-gashi",
     label: "LinkedIn",
   },
 ];
@@ -59,6 +59,8 @@ const Contact = () => {
             <a
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={link.label}
               className="w-12 h-12 flex items-center justify-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
             >

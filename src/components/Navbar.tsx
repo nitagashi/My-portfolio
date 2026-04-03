@@ -34,10 +34,13 @@ const Navbar = () => {
     }
   }, [location]);
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
+
     if (location.pathname !== "/") {
       navigate(`/#${sectionId}`);
     } else {
@@ -50,7 +53,9 @@ const Navbar = () => {
     <>
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg border-b border-border"
+            : ""
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -58,7 +63,7 @@ const Navbar = () => {
       >
         <nav className="section-padding py-5 flex items-center justify-between">
           <Link to="/" className="font-display text-2xl font-semibold">
-            Portfolio<span className="text-primary">.</span>
+            Albenita <span className="text-primary">Gashi</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -81,7 +86,7 @@ const Navbar = () => {
                 >
                   {link.label}
                 </a>
-              )
+              ),
             )}
             <a
               href="/#contact"
@@ -98,7 +103,11 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </nav>
       </motion.header>
@@ -116,7 +125,12 @@ const Navbar = () => {
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) =>
                 link.isRoute ? (
-                  <motion.div key={link.href} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}>
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
                     <Link
                       to={link.href}
                       className="font-display text-3xl font-semibold hover:text-primary transition-colors"
@@ -137,7 +151,7 @@ const Navbar = () => {
                   >
                     {link.label}
                   </motion.a>
-                )
+                ),
               )}
               <motion.a
                 href="/#contact"
