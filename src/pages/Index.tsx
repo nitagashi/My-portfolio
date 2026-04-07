@@ -11,17 +11,15 @@ const Index = () => {
       {/* Aurora northern lights effect */}
       <div className="absolute top-0 left-0 right-0 h-[100vh] pointer-events-none overflow-hidden">
         {/* Base dark gradient */}
-        <div
-          className="absolute inset-0 bg-background"
-        />
+        <div className="absolute inset-0 bg-background" />
 
         {/* Aurora band 1 - primary teal */}
         <div
           className="absolute top-[-20%] left-[-20%] w-[140%] h-[60%] animate-[aurora1_8s_ease-in-out_infinite]"
           style={{
             background: `linear-gradient(180deg, transparent 0%, hsl(173 80% 45% / 0.15) 30%, hsl(173 80% 45% / 0.25) 50%, hsl(190 85% 50% / 0.1) 70%, transparent 100%)`,
-            filter: 'blur(80px)',
-            borderRadius: '50%',
+            filter: "blur(80px)",
+            borderRadius: "50%",
           }}
         />
 
@@ -30,8 +28,8 @@ const Index = () => {
           className="absolute top-[-10%] left-[10%] w-[120%] h-[50%] animate-[aurora2_12s_ease-in-out_infinite]"
           style={{
             background: `linear-gradient(180deg, transparent 0%, hsl(150 70% 40% / 0.12) 40%, hsl(173 80% 45% / 0.2) 60%, transparent 100%)`,
-            filter: 'blur(100px)',
-            borderRadius: '50%',
+            filter: "blur(100px)",
+            borderRadius: "50%",
           }}
         />
 
@@ -40,13 +38,14 @@ const Index = () => {
           className="absolute top-[-5%] left-[-10%] w-[130%] h-[45%] animate-[aurora3_10s_ease-in-out_infinite]"
           style={{
             background: `linear-gradient(180deg, transparent 0%, hsl(260 60% 50% / 0.08) 30%, hsl(200 70% 45% / 0.15) 55%, transparent 100%)`,
-            filter: 'blur(90px)',
-            borderRadius: '50%',
+            filter: "blur(90px)",
+            borderRadius: "50%",
           }}
         />
 
         {/* Star field */}
-        <div className="absolute inset-0 opacity-40"
+        <div
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `radial-gradient(1px 1px at 20% 30%, hsl(var(--foreground)) 50%, transparent 100%),
               radial-gradient(1px 1px at 40% 70%, hsl(var(--foreground)) 50%, transparent 100%),
@@ -71,7 +70,7 @@ const Index = () => {
       </div>
 
       <Navbar />
-      <main className="relative z-10">
+      <main className="relative">
         <Hero />
         <Projects />
         <About />

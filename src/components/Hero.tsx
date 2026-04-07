@@ -1,7 +1,25 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    e.preventDefault();
+    // setIsMobileMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center section-padding py-20">
       {/* Background glow effect */}
@@ -49,13 +67,14 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
           <a
-            href="#projects"
+            href="/#projects"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
           >
             View Projects
           </a>
           <a
-            href="#contact"
+            href="/#contact"
+            onClick={(e) => handleAnchorClick(e, "contact")}
             className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-lg hover:bg-secondary transition-colors"
           >
             Get in Touch
