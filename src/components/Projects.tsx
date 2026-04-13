@@ -23,7 +23,7 @@ const ProjectCard = ({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       onClick={onClick}
     >
-      <div className="relative overflow-hidden rounded-xl bg-card border border-border glow-card hover:border-primary/30 transition-colors">
+      <div className="relative overflow-hidden rounded-xl bg-card border border-border glow-card hover:border-primary/30 transition-colors h-full">
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
@@ -32,7 +32,7 @@ const ProjectCard = ({
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
-          
+
           {/* Hover overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="px-4 py-2 bg-primary text-primary-foreground font-medium rounded-lg text-sm">
@@ -69,11 +69,11 @@ const ProjectCard = ({
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const featuredProjects = projects.slice(0, 6);
+  const featuredProjects = projects.slice(0, 4);
 
   return (
     <section id="projects" className="section-padding py-24 md:py-32">
-      <div className="max-w-6xl mx-auto">
+      <div className=" mx-auto">
         <motion.div
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -98,7 +98,7 @@ const Projects = () => {
           </Link>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}

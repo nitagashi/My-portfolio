@@ -24,7 +24,7 @@ const ProjectCard = ({
       onClick={onClick}
       layout
     >
-      <div className="relative overflow-hidden rounded-xl bg-card border border-border glow-card hover:border-primary/30 transition-colors">
+      <div className="relative overflow-hidden rounded-xl bg-card border border-border glow-card hover:border-primary/30 transition-colors h-full">
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img

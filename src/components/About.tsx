@@ -35,8 +35,8 @@ const skills = [
 const About = () => {
   return (
     <section id="about" className="section-padding py-24 md:py-32 bg-card/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-1 gap-32 items-center text-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -59,12 +59,6 @@ const About = () => {
                 practices, and problem-solving. Passionate about building
                 efficient, user-focused software solutions.
               </p>
-              <p>
-                When I'm not coding, you'll find me exploring new design trends,
-                contributing to open-source projects, or experimenting with
-                emerging technologies. I'm always looking for new challenges
-                that push me to grow as a developer and designer.
-              </p>
             </div>
           </motion.div>
 
@@ -77,7 +71,7 @@ const About = () => {
             <h3 className="font-display text-2xl font-semibold mb-6">
               Skills & Technologies
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center">
               {skills.map((skill, index) => (
                 <motion.span
                   key={skill}

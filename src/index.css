@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap");
 
 /* Portfolio Design System - Dark Editorial Theme */
 
@@ -39,14 +39,22 @@
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(173 80% 45%) 0%, hsl(190 85% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(220 20% 9%) 0%, hsl(220 20% 5%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(173 80% 45%) 0%,
+      hsl(190 85% 50%) 100%
+    );
+    --gradient-card: linear-gradient(
+      180deg,
+      hsl(220 20% 9%) 0%,
+      hsl(220 20% 5%) 100%
+    );
     --glow-primary: 0 0 60px hsl(173 80% 45% / 0.2);
     --glow-card: 0 0 40px hsl(220 20% 0% / 0.5);
-    
+
     /* Typography */
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Sora', sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Sora", sans-serif;
   }
 
   .dark {
@@ -69,7 +77,12 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
 }
