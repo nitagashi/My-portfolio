@@ -24,7 +24,22 @@ const ProjectCard = ({
       onClick={onClick}
       layout
     >
-      <div className="relative overflow-hidden rounded-xl bg-card border border-border glow-card hover:border-primary/30 transition-colors h-full">
+      <div
+        className={`relative overflow-hidden rounded-xl bg-card border projectCard transition-colors ${
+          project.inProgress
+            ? "border-primary/60 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.4)] hover:border-primary"
+            : "border-border glow-card hover:border-primary/30"
+        }`}
+      >
+        {project.inProgress && (
+          <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/15 backdrop-blur-md border border-primary/40 text-primary text-xs font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+            </span>
+            In Progress
+          </div>
+        )}
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img

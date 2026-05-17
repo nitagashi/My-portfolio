@@ -104,4 +104,7 @@
   .section-padding {
     @apply px-6 md:px-12 lg:px-24;
   }
+  .projectCard {
+    height: 100%;
+  }
 }
