@@ -40,7 +40,7 @@ export const projects: Project[] = [
       "Admin dashboard",
       "Payment integration",
     ],
-    year: "2024",
+    year: "2023",
     media: [
       {
         type: "image",
@@ -103,7 +103,7 @@ export const projects: Project[] = [
         caption: "Dashboard view",
       },
     ],
-    year: "2024",
+    year: "2026",
     liveUrl: "https://nitagashi.github.io/text-comparer-app/",
     inProgress: true,
   },
@@ -152,7 +152,6 @@ export const projects: Project[] = [
     ],
     inProgress: true,
   },
-
   {
     id: "Image-Reference-App",
     title: "Image Reference App",
@@ -178,7 +177,7 @@ export const projects: Project[] = [
       "Dark Theme",
       "Lightweight and Fast",
     ],
-    year: "2024",
+    year: "2026",
     media: [
       {
         type: "image",
@@ -326,7 +325,7 @@ export const projects: Project[] = [
       "Promotions and discounts",
       "Admin dashboard for restaurant management",
     ],
-    year: "2023",
+    year: "2022",
     media: [
       {
         type: "image",
@@ -375,7 +374,7 @@ export const projects: Project[] = [
       "Customizable financial goals and alerts",
       "Data export and backup options",
     ],
-    year: "2023",
+    year: "2026",
     media: [
       {
         type: "image",

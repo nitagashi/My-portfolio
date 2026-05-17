@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Globe } from "lucide-react";
 import { projects, Project } from "@/data/projects";
 import ProjectModal from "./ProjectModal";
 
@@ -37,6 +37,12 @@ const ProjectCard = ({
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
             In Progress
+          </div>
+        )}
+        {project.liveUrl && (
+          <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/70 backdrop-blur-md border border-border text-foreground text-xs font-medium">
+            <Globe className="w-3 h-3 text-primary" />
+            Live Demo
           </div>
         )}
         {/* Image */}

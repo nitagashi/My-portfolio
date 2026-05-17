@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Filter, X } from "lucide-react";
+import { ExternalLink, Github, Filter, X, Globe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectModal from "@/components/ProjectModal";
@@ -25,7 +25,7 @@ const ProjectCard = ({
       layout
     >
       <div
-        className={`relative overflow-hidden rounded-xl bg-card border projectCard transition-colors ${
+        className={`relative overflow-hidden rounded-xl bg-card border transition-colors ${
           project.inProgress
             ? "border-primary/60 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.4)] hover:border-primary"
             : "border-border glow-card hover:border-primary/30"
@@ -37,7 +37,13 @@ const ProjectCard = ({
               <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            In Progress
+            Working on
+          </div>
+        )}
+        {project.liveUrl && (
+          <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/70 backdrop-blur-md border border-border text-foreground text-xs font-medium">
+            <Globe className="w-3 h-3 text-primary" />
+            Live Demo
           </div>
         )}
         {/* Image */}
