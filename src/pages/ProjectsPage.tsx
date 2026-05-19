@@ -25,7 +25,7 @@ const ProjectCard = ({
       layout
     >
       <div
-        className={`relative overflow-hidden rounded-xl bg-card border transition-colors ${
+        className={`relative overflow-hidden rounded-xl bg-card border projectCard transition-colors ${
           project.inProgress
             ? "border-primary/60 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.4)] hover:border-primary"
             : "border-border glow-card hover:border-primary/30"

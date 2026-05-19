@@ -21,6 +21,56 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "Story-planner",
+    title: "Story Planner",
+    description:
+      "A visual-first writing application for novelists focused on story organisation, continuity, timelines, and relationship mapping.",
+    longDescription:
+      "Story Planner is a modern writing and worldbuilding application designed for authors who think visually. Instead of acting like a traditional text editor, the app functions as a complete story control centre with interactive graphs, relationship networks, plot boards, and continuity tracking. Writers can manage characters, organise chapters with drag-and-drop workflows, build timelines, map lore and locations, and visualise connections across the entire story. Built with a modular architecture using React, Tauri, Rust, and SQLite, the app is designed for both desktop and Android platforms while keeping all data stored locally.",
+    tags: ["React JS", "Tauri 2.0", "Rust", "Android", "SQLite"],
+    image: "assets/img/story-planner.png",
+    // liveUrl: "#",
+    // githubUrl: "#",
+    features: [
+      "Visual character management system with relationship graphs",
+      "Interactive drag-and-drop plot board for chapter organisation",
+      "Timeline and continuity tracking with event linking",
+      "Worldbuilding and lore management with visual mapping",
+      "Force-directed relationship network between characters",
+      "Chapter editor with linked characters, locations, and events",
+      "Zoomable and pannable graph views",
+      "Dark and light mode support",
+      "Local-first data storage using SQLite",
+      "Cross-platform support for desktop and Android",
+      "Modular architecture for future feature expansion",
+      "Continuity issue highlighting and story flow tracking",
+    ],
+    year: "2026",
+    media: [
+      {
+        type: "image",
+        url: "assets/img/story-planner.png",
+        caption: "Dashboard view",
+      },
+      {
+        type: "image",
+        url: "assets/img/story-planner-1.png",
+        caption: "Character relationship graph",
+      },
+      {
+        type: "image",
+        url: "assets/img/story-planner-2.png",
+        caption: "Timeline and plot organisation",
+      },
+      {
+        type: "video",
+        url: "CmLKmnPEeeo",
+        caption: "Application showcase",
+      },
+    ],
+    inProgress: true,
+  },
+  {
     id: "React-Native-Yoga-App",
     title: "React Native Yoga App",
     description:
@@ -150,7 +200,6 @@ export const projects: Project[] = [
         caption: "App video",
       },
     ],
-    inProgress: true,
   },
   {
     id: "Image-Reference-App",
