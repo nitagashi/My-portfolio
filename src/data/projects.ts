@@ -125,6 +125,40 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "OCR-Image-Text-Extractor",
+    title: "OCR Image Text Extractor",
+    description:
+      "A modern OCR web application that extracts text from images using Tesseract.js.",
+    longDescription:
+      "An elegant and responsive OCR (Optical Character Recognition) application built with React and Tesseract.js. Users can upload images, preview them instantly, and extract readable text with real-time progress tracking. The app features a modern glassmorphism-inspired interface designed for a clean and intuitive user experience.",
+    tags: ["React", "JavaScript", "Tesseract.js", "CSS3"],
+    image: "assets/img/ocr-app-2.png",
+    liveUrl: "https://nitagashi.github.io/text-extract-app/",
+    githubUrl: "https://github.com/nitagashi/text-extract-app/",
+    features: [
+      "Image text extraction",
+      "OCR processing with Tesseract.js",
+      "Live extraction progress",
+      "Image preview",
+      "Responsive modern UI",
+      "Glassmorphism design",
+      "Multi-image format support",
+    ],
+    year: "2025",
+    media: [
+      {
+        type: "image",
+        url: "assets/img/ocr-app-1.png",
+        caption: "Main application interface",
+      },
+      {
+        type: "image",
+        url: "assets/img/ocr-app-2.png",
+        caption: "OCR extraction results",
+      },
+    ],
+  },
+  {
     id: "Text comparer App",
     title: "Text comparer App",
     description: "A simple and efficient tool for comparing two texts.",
