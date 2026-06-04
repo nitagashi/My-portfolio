@@ -30,7 +30,13 @@ const StatusBadge = ({ project }: { project: Project }) => {
   return null;
 };
 
-const FeaturedProject = ({ project, onClick }: { project: Project; onClick: () => void }) => (
+const FeaturedProject = ({
+  project,
+  onClick,
+}: {
+  project: Project;
+  onClick: () => void;
+}) => (
   <motion.article
     className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 cursor-pointer"
     initial={{ opacity: 0, y: 40 }}
@@ -105,7 +111,7 @@ const ShowcaseCard = ({
     transition={{ duration: 0.7, delay: index * 0.08, ease }}
     onClick={onClick}
   >
-    <div className="relative overflow-hidden rounded-lg border border-border aspect-[4/3]">
+    <div className="relative h-full overflow-hidden rounded-lg border border-border ">
       <img
         src={project.image}
         alt={project.title}
@@ -166,7 +172,10 @@ const Projects = () => {
             {/* Left: eyebrow + headline */}
             <motion.div
               className="relative flex flex-col gap-6"
-              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.7, ease }}
             >
               <div className="flex items-center gap-4">
@@ -188,7 +197,10 @@ const Projects = () => {
             {/* Right: link */}
             <motion.div
               className="relative md:mb-4"
-              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.7, ease }}
             >
               <Link
@@ -211,7 +223,10 @@ const Projects = () => {
 
         {/* Featured */}
         <div className="mb-16 md:mb-24">
-          <FeaturedProject project={featured} onClick={() => setSelectedProject(featured)} />
+          <FeaturedProject
+            project={featured}
+            onClick={() => setSelectedProject(featured)}
+          />
         </div>
 
         {/* Showcase grid with varying sizes */}
