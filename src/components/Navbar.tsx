@@ -52,20 +52,22 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/80 backdrop-blur-lg border-b border-border"
-            : ""
+            ? "bg-background/85 border-b border-border"
+            : "border-b border-transparent"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <nav className="section-padding py-5 flex items-center justify-between">
-          <Link to="/" className="font-display text-2xl font-semibold">
-            Albenita <span className="text-primary">Gashi</span>
-          </Link>
-
+          <div className="flex items-center gap-2">
+            <img src="assets/img/logo.png" alt="Logo" width={40} height={40} />
+            <Link to="/" className="font-display text-2xl font-semibold">
+              Albenita <span className="text-primary">Gashi</span>
+            </Link>
+          </div>
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
@@ -73,7 +75,7 @@ const Navbar = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors story-link"
                 >
                   {link.label}
                 </Link>
@@ -82,7 +84,7 @@ const Navbar = () => {
                   key={link.href}
                   href={`/#${link.href}`}
                   onClick={(e) => handleAnchorClick(e, link.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors story-link"
                 >
                   {link.label}
                 </a>
@@ -91,7 +93,7 @@ const Navbar = () => {
             <a
               href="/#contact"
               onClick={(e) => handleAnchorClick(e, "contact")}
-              className="px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+              className="px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-full hover:scale-[1.03] transition-transform"
             >
               Get in Touch
             </a>

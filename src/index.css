@@ -2,64 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:wght@300;400;500;600;700&display=swap");
 
-/* Portfolio Design System - Dark Editorial Theme */
+/* Portfolio Design System - Blush & Lavender, Soft Luxury */
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 210 40% 98%;
+    --background: 290 18% 8%;
+    --foreground: 320 20% 94%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 290 16% 11%;
+    --card-foreground: 320 20% 94%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 290 16% 11%;
+    --popover-foreground: 320 20% 94%;
 
-    --primary: 173 80% 45%;
-    --primary-foreground: 220 20% 4%;
+    --primary: 268 60% 72%;
+    --primary-foreground: 290 18% 8%;
 
-    --secondary: 220 15% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 290 14% 16%;
+    --secondary-foreground: 320 20% 92%;
 
-    --muted: 220 15% 16%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 290 12% 18%;
+    --muted-foreground: 300 8% 62%;
 
-    --accent: 173 80% 45%;
-    --accent-foreground: 220 20% 4%;
+    --accent: 268 60% 72%;
+    --accent-foreground: 290 18% 8%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 58%;
+    --destructive-foreground: 320 20% 96%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 173 80% 45%;
+    --border: 290 12% 20%;
+    --input: 290 12% 20%;
+    --ring: 268 60% 72%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom tokens */
+    --hairline: 290 10% 26%;
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(173 80% 45%) 0%,
-      hsl(190 85% 50%) 100%
+      hsl(268 60% 72%) 0%,
+      hsl(330 55% 68%) 100%
     );
     --gradient-card: linear-gradient(
       180deg,
-      hsl(220 20% 9%) 0%,
-      hsl(220 20% 5%) 100%
+      hsl(290 16% 12%) 0%,
+      hsl(290 18% 9%) 100%
     );
-    --glow-primary: 0 0 60px hsl(173 80% 45% / 0.2);
-    --glow-card: 0 0 40px hsl(220 20% 0% / 0.5);
+    --shadow-elevated: 0 30px 70px -30px hsl(290 40% 2% / 0.6);
 
     /* Typography */
-    --font-display: "Space Grotesk", sans-serif;
-    --font-body: "Sora", sans-serif;
+    --font-display: "Cormorant Garamond", serif;
+    --font-body: "Karla", sans-serif;
   }
 
   .dark {
-    --background: 220 20% 4%;
-    --foreground: 210 40% 98%;
+    --background: 290 18% 8%;
+    --foreground: 320 20% 94%;
   }
 }
 
@@ -93,18 +93,23 @@
     background-image: var(--gradient-primary);
   }
 
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-
-  .glow-card {
-    box-shadow: var(--glow-card);
-  }
-
   .section-padding {
     @apply px-6 md:px-12 lg:px-24;
   }
-  .projectCard {
-    height: 100%;
+
+  .hairline {
+    @apply bg-border;
+  }
+
+  /* Animated underline for inline links */
+  .story-link {
+    @apply relative inline-block;
+  }
+  .story-link::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-px w-full origin-bottom-right scale-x-0 bg-primary transition-transform duration-300;
+  }
+  .story-link:hover::after {
+    @apply origin-bottom-left scale-x-100;
   }
 }
