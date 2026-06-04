@@ -63,7 +63,7 @@ const Navbar = () => {
       >
         <nav className="section-padding py-5 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="assets/img/logo.png" alt="Logo" width={40} height={40} />
+            {/* <img src="assets/img/logo.png" alt="Logo" width={40} height={40} /> */}
             <Link to="/" className="font-display text-2xl font-semibold">
               Albenita <span className="text-primary">Gashi</span>
             </Link>
