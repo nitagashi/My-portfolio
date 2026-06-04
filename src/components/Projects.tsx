@@ -141,12 +141,14 @@ const ShowcaseCard = ({
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const featured = projects[0];
-  const showcase = projects.slice(1, 5);
+  const showcase = projects.slice(1, 7);
   const spans = [
     "md:col-span-7",
     "md:col-span-5",
     "md:col-span-5",
     "md:col-span-7",
+    "md:col-span-7",
+    "md:col-span-5",
   ];
 
   return (
@@ -189,8 +191,7 @@ const Projects = () => {
               </div>
 
               <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tight leading-[0.85]">
-                Things I've{" "}
-                <span className="italic font-light opacity-90">built</span>
+                My projects{" "}
               </h2>
             </motion.div>
 
