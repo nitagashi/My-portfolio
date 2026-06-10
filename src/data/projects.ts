@@ -21,6 +21,39 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "Text comparer App",
+    title: "Text comparer App",
+    description: "A simple and efficient tool for comparing two texts.",
+    longDescription: "",
+    tags: ["React Js", "Vite"],
+    image: "assets/img/text-comparer.png",
+    // liveUrl: "#",
+    githubUrl: "https://github.com/nitagashi/text-comparer-app",
+    features: [
+      "Import files for comparing",
+      "Word and Line level compare",
+      "List of changes to track differences",
+      "Copy text options",
+      "Light and Dark mode",
+      "Word counts for both texts",
+    ],
+    media: [
+      {
+        type: "image",
+        url: "assets/img/text-comparer.png",
+        caption: "Dashboard view",
+      },
+      {
+        type: "image",
+        url: "assets/img/text-comparer-1.png",
+        caption: "Dashboard view",
+      },
+    ],
+    year: "2026",
+    liveUrl: "https://nitagashi.github.io/text-comparer-app/",
+    inProgress: true,
+  },
+  {
     id: "Story-planner",
     title: "Story Planner",
     description:
@@ -158,40 +191,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    id: "Text comparer App",
-    title: "Text comparer App",
-    description: "A simple and efficient tool for comparing two texts.",
-    longDescription: "",
-    tags: ["React Js", "Vite"],
-    image: "assets/img/text-comparer.png",
-    // liveUrl: "#",
-    githubUrl: "https://github.com/nitagashi/text-comparer-app",
-    features: [
-      "Import files for comparing",
-      "Word and Line level compare",
-      "List of changes to track differences",
-      "Copy text options",
-      "Light and Dark mode",
-      "Word counts for both texts",
-    ],
-    media: [
-      {
-        type: "image",
-        url: "assets/img/text-comparer.png",
-        caption: "Dashboard view",
-      },
-      {
-        type: "image",
-        url: "assets/img/text-comparer-1.png",
-        caption: "Dashboard view",
-      },
-    ],
-    year: "2026",
-    liveUrl: "https://nitagashi.github.io/text-comparer-app/",
-    inProgress: true,
-  },
-
   {
     id: "Pdf-merger",
     title: "Pdf Merger",
