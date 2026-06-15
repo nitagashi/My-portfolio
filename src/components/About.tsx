@@ -30,6 +30,7 @@ const skills = [
   "Tauri",
   "Android",
   "SQLite",
+  "CI/CD",
 ];
 
 const About = () => {

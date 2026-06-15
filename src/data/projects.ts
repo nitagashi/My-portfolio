@@ -21,6 +21,53 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "writers-archive",
+    title: "Writer's Archive",
+    description:
+      "A personal writing reference library for organising emotions, behaviours, injuries, character traits, names, and storytelling resources.",
+    longDescription:
+      "Writer's Archive is a desktop application designed for writers to collect, organise, and search writing references. Store descriptions of emotions, behaviours, injuries, character traits, names, and other storytelling elements in a searchable archive. Built with React, Vite, and Tauri, it includes automatic updates through a CI/CD pipeline for seamless distribution.",
+    tags: ["React", "Vite", "Tauri 2.0", "TypeScript", "CI/CD"],
+    image: "assets/img/writers-archive.png",
+
+    githubUrl: "https://github.com/nitagashi/writers-archive",
+
+    features: [
+      "Store writing reference entries",
+      "Organise entries by category",
+      "Powerful full-text search",
+      "Tagging system for quick filtering",
+      "Favourite important entries",
+      "Rich text descriptions",
+      "Dark and Light mode",
+      "Automatic desktop updates",
+    ],
+
+    media: [
+      {
+        type: "image",
+        url: "assets/img/writers-archive.png",
+        caption: "Archive dashboard",
+      },
+      {
+        type: "image",
+        url: "assets/img/writers-archive-1.png",
+        caption: "Entry details view",
+      },
+      {
+        type: "image",
+        url: "assets/img/writers-archive-2.png",
+        caption: "Entry details view",
+      },
+    ],
+
+    year: "2026",
+
+    liveUrl: "https://github.com/nitagashi/writers-archive/releases/tag/v0.1.5",
+
+    inProgress: false,
+  },
+  {
     id: "Text comparer App",
     title: "Text comparer App",
     description: "A simple and efficient tool for comparing two texts.",
@@ -51,7 +98,6 @@ export const projects: Project[] = [
     ],
     year: "2026",
     liveUrl: "https://nitagashi.github.io/text-comparer-app/",
-    inProgress: true,
   },
   {
     id: "Story-planner",
@@ -101,7 +147,6 @@ export const projects: Project[] = [
         caption: "Application showcase",
       },
     ],
-    inProgress: true,
   },
   {
     id: "React-Native-Yoga-App",
@@ -489,7 +534,6 @@ export const projects: Project[] = [
         caption: "Mobile App",
       },
     ],
-    inProgress: true,
   },
 ];
 
