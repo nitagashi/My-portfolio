@@ -136,7 +136,7 @@ const ProjectsPage = () => {
               All Projects
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              A collection of projects I've worked on, ranging from web
+              A collection of projects I've created, ranging from web
               applications to mobile apps and everything in between.
             </p>
           </motion.div>
